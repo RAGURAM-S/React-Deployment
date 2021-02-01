@@ -27,7 +27,6 @@ class App extends Component{
   async componentDidMount(){
     const response = await fetch(urlString)
     const data = await response.json();
-    console.log(data)
     // data.sort((a, b) => (a.id < b.id) ? -1 : 1)
     data.sort(this.sortMonths)
     this.setState({records: data, loading:false})
